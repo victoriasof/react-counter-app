@@ -6,12 +6,12 @@ class App extends Component {
 
   state = {
     counters: [
-      {id: 1, value: O}, 
-      {id: 2, value: 0},
-      {id: 3, value: 0},
-      {id: 4, value: 0}, 
+      { id: 1, value: O }, 
+      { id: 2, value: 0 },
+      { id: 3, value: 0 },
+      { id: 4, value: 0 }
     ]
-  }
+  };
 
   handleIncrement = counter => {
     const counters = [...this.state.counters];
@@ -21,9 +21,9 @@ class App extends Component {
     this.setState({ counters });
   };
 
-  handleDecrement =  counter => {
+  handleDecrement = counter => {
     const counters = [...this.state.counters];
-    const index =  counters.indexOf(counter);
+    const index = counters.indexOf(counter);
     counters[index] = { ...countesrs[index] };
     counters[index].value--;
     this.setState({ counters });
@@ -37,7 +37,7 @@ class App extends Component {
     this.setState({ counters });
   };
 
-  handleDelete =  counterId => {
+  handleDelete = counterId => {
     const counters = this.state.counters.filter(c => c.id !== counterId);
     this.setState({ counters });
   };
